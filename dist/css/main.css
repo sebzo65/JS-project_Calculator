@@ -1,0 +1,302 @@
+.phoneCalculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid black;
+}
+.phoneCalculator__screen {
+  height: 85vh;
+  width: 24vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+}
+.phoneCalculator__screen--nav {
+  border: 1px solid black;
+  height: 6%;
+  margin: 2% 2%;
+}
+.phoneCalculator__screen--display {
+  height: 24%;
+  margin: 1% 2%;
+  font-size: auto;
+  font-size: x-large;
+}
+.phoneCalculator__screen--buttons {
+  height: 63%;
+  margin: 0 2% 0 2%;
+  display: flex;
+  flex-direction: column;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine {
+  height: 18%;
+  margin: 0;
+  display: flex;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--AC {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #d4d4d2;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--AC:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--plusMinus {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #d4d4d2;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--plusMinus:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--percentage {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #d4d4d2;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--percentage:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--divide {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #ff9500;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__firstLine--divide:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine {
+  height: 18%;
+  margin: 1% 0 0;
+  display: flex;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--seven {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--seven:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--eight {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--eight:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--nine {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--nine:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--multiply {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #ff9500;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__secondLine--multiply:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine {
+  height: 18%;
+  margin: 1% 0 0;
+  display: flex;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--four {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--four:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--five {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--five:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--six {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--six:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--minus {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #ff9500;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__thirdLine--minus:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine {
+  height: 18%;
+  margin: 1% 0 0;
+  display: flex;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--one {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--one:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--two {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--two:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--three {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--three:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--plus {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #ff9500;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fourthLine--plus:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine {
+  height: 18%;
+  margin: 1% 0 0;
+  display: flex;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--zero {
+  border: 1px solid black;
+  height: 100%;
+  width: 40%;
+  border-radius: 75%;
+  margin: 0 4% 0 5.3%;
+  font-size: x-large;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--zero:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--decimal {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  margin-left: 6.3%;
+  background-color: #505050;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--decimal:hover {
+  opacity: 0.5;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--equals {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+  background-color: #ff9500;
+  color: white;
+}
+.phoneCalculator__screen--buttons .buttons__fifthLine--equals:hover {
+  opacity: 0.5;
+}

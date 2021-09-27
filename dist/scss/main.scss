@@ -1,0 +1,256 @@
+@use "config";
+
+.phoneCalculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid black;
+
+  &__screen {
+    height: 85vh;
+    width: 24vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: config.$phone-back-black;
+
+    &--nav {
+      border: 1px solid black;
+      height: 6%;
+      margin: 2% 2%;
+    }
+
+    &--display {
+      height: 24%;
+      margin: 1% 2%;
+      font-size: auto;
+      font-size: x-large;
+    }
+
+    &--buttons {
+      height: 63%;
+      margin: 0 2% 0 2%;
+      display: flex;
+      flex-direction: column;
+
+      .buttons__firstLine {
+        height: 18%;
+        margin: 0;
+        display: flex;
+
+        &--AC {
+          @include config.button__styling;
+          background-color: config.$button-color-gray;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--plusMinus {
+          @include config.button__styling;
+          background-color: config.$button-color-gray;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--percentage {
+          @include config.button__styling;
+          background-color: config.$button-color-gray;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--divide {
+          @include config.button__styling;
+          background-color: config.$button-color-orange;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+      }
+
+      .buttons__secondLine {
+        height: 18%;
+        margin: 1% 0 0;
+        display: flex;
+
+        &--seven {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--eight {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--nine {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--multiply {
+          @include config.button__styling;
+          background-color: config.$button-color-orange;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+      }
+
+      .buttons__thirdLine {
+        height: 18%;
+        margin: 1% 0 0;
+        display: flex;
+
+        &--four {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--five {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--six {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--minus {
+          @include config.button__styling;
+          background-color: config.$button-color-orange;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+      }
+
+      .buttons__fourthLine {
+        height: 18%;
+        margin: 1% 0 0;
+        display: flex;
+
+        &--one {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--two {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--three {
+          @include config.button__styling;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--plus {
+          @include config.button__styling;
+          background-color: config.$button-color-orange;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+      }
+
+      .buttons__fifthLine {
+        height: 18%;
+        margin: 1% 0 0;
+        display: flex;
+
+        &--zero {
+          @include config.button__styling--zero;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--decimal {
+          @include config.button__styling;
+          margin-left: 6.3%;
+          background-color: config.$button-color-darkGray;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+
+        &--equals {
+          @include config.button__styling;
+          background-color: config.$button-color-orange;
+          color: white;
+
+          &:hover {
+            @include config.button-hover;
+          }
+        }
+      }
+    }
+  }
+}

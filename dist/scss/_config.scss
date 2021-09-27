@@ -1,0 +1,26 @@
+$button-color-gray: #d4d4d2;
+$button-color-orange: #ff9500;
+$phone-back-black: #1c1c1c;
+$button-color-darkGray: #505050;
+
+@mixin button__styling {
+  border: 1px solid black;
+  height: 100%;
+  width: 18%;
+  border-radius: 50%;
+  margin: 0 4%;
+  font-size: x-large;
+}
+
+@mixin button__styling--zero {
+  border: 1px solid black;
+  height: 100%;
+  width: 40%;
+  border-radius: 75%;
+  margin: 0 4% 0 5.3%;
+  font-size: x-large;
+}
+
+@mixin button-hover {
+  opacity: 0.5;
+}
