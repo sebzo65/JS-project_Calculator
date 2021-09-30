@@ -62,33 +62,33 @@ const calculator = {
   operator: null, //Math operator for expression
 };
 
-function updateDisplay() {
-  display;
-  display.value = calculator.displayValue;
-}
-updateDisplay();
+// function updateDisplay() {
+//   display;
+//   display.value = calculator.displayValue;
+// }
+// updateDisplay();
 
-const keys = buttonsFirst;
-keys.addEventListener("click", (event) => {
-  const { target } = event; //Equivalent of event.target
-  //target variable represents element that is clicked
-  if (!target.matches("button")) {
-    return;
-  }
-  if (target.classList.contains("operator")) {
-    console.log("operator", target.value);
-    return;
-  }
-  if (target.classList.contains("decimal")) {
-    console.log("decimal", target.value);
-    return;
-  }
-  if (target.classList.contains("all-clear")) {
-    console.log("clear", target.value);
-    return;
-  }
-  console.log("digit", target.value);
-});
+// const keys = buttonsFirst;
+// keys.addEventListener("click", (event) => {
+//   const { target } = event; //Equivalent of event.target
+//   //target variable represents element that is clicked
+//   if (!target.matches("button")) {
+//     return;
+//   }
+//   if (target.classList.contains("operator")) {
+//     console.log("operator", target.value);
+//     return;
+//   }
+//   if (target.classList.contains("decimal")) {
+//     console.log("decimal", target.value);
+//     return;
+//   }
+//   if (target.classList.contains("all-clear")) {
+//     console.log("clear", target.value);
+//     return;
+//   }
+//   console.log("digit", target.value);
+// });
 
 //First Line Buttons//
 
@@ -211,12 +211,12 @@ function plusClick(event) {
   display.value += plus.value;
 }
 
-const calculator = {
-  displayValue: "0", //user input
-  num1: null, //1st part of mathematical expression
-  waitingForSecondNum: false, //Check whether 1st expression & math operator have been inputted
-  operator: null, //Math operator for expression
-};
+// const calculator = {
+//   displayValue: "0", //user input
+//   num1: null, //1st part of mathematical expression
+//   waitingForSecondNum: false, //Check whether 1st expression & math operator have been inputted
+//   operator: null, //Math operator for expression
+// };
 
 function updateDisplay() {
   display;
