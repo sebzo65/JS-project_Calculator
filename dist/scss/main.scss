@@ -39,7 +39,7 @@
         margin: 0;
         display: flex;
 
-        &--AC {
+        #AC {
           @include config.button__styling;
           background-color: config.$button-color-gray;
 
@@ -48,7 +48,7 @@
           }
         }
 
-        &--plusMinus {
+        #plusMinus {
           @include config.button__styling;
           background-color: config.$button-color-gray;
 
@@ -57,7 +57,7 @@
           }
         }
 
-        &--percentage {
+        #percentage {
           @include config.button__styling;
           background-color: config.$button-color-gray;
 
@@ -66,7 +66,7 @@
           }
         }
 
-        &--divide {
+        #divide {
           @include config.button__styling;
           background-color: config.$button-color-orange;
           color: white;
@@ -82,7 +82,7 @@
         margin: 1% 0 0;
         display: flex;
 
-        &--seven {
+        #seven {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -92,7 +92,7 @@
           }
         }
 
-        &--eight {
+        #eight {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -102,7 +102,7 @@
           }
         }
 
-        &--nine {
+        #nine {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -112,7 +112,7 @@
           }
         }
 
-        &--multiply {
+        #multiply {
           @include config.button__styling;
           background-color: config.$button-color-orange;
           color: white;
@@ -128,7 +128,7 @@
         margin: 1% 0 0;
         display: flex;
 
-        &--four {
+        #four {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -138,7 +138,7 @@
           }
         }
 
-        &--five {
+        #five {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -148,7 +148,7 @@
           }
         }
 
-        &--six {
+        #six {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -158,7 +158,7 @@
           }
         }
 
-        &--minus {
+        #minus {
           @include config.button__styling;
           background-color: config.$button-color-orange;
           color: white;
@@ -174,7 +174,7 @@
         margin: 1% 0 0;
         display: flex;
 
-        &--one {
+        #one {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -184,7 +184,7 @@
           }
         }
 
-        &--two {
+        #two {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -194,7 +194,7 @@
           }
         }
 
-        &--three {
+        #three {
           @include config.button__styling;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -204,7 +204,7 @@
           }
         }
 
-        &--plus {
+        #plus {
           @include config.button__styling;
           background-color: config.$button-color-orange;
           color: white;
@@ -220,7 +220,7 @@
         margin: 1% 0 0;
         display: flex;
 
-        &--zero {
+        #zero {
           @include config.button__styling--zero;
           background-color: config.$button-color-darkGray;
           color: white;
@@ -230,7 +230,7 @@
           }
         }
 
-        &--decimal {
+        #decimal {
           @include config.button__styling;
           margin-left: 6.3%;
           background-color: config.$button-color-darkGray;
@@ -241,7 +241,7 @@
           }
         }
 
-        &--equals {
+        #equals {
           @include config.button__styling;
           background-color: config.$button-color-orange;
           color: white;

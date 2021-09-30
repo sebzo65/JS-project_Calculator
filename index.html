@@ -8,43 +8,43 @@
     <title>Calculator</title>
   </head>
   <body>
-    <script src="dist/js/script.js"></script>
     <main class="phoneCalculator">
       <section class="phoneCalculator__screen">
         <div class="phoneCalculator__screen--nav"></div>
-        <input type="text" class="phoneCalculator__screen--display" disabled></input>
-        <form class="phoneCalculator__screen--buttons">
+        <input type="text" class="phoneCalculator__screen--display" disabled />
+        <div class="phoneCalculator__screen--buttons">
           <div class="buttons__firstLine">
-            <button class="buttons__firstLine--AC">AC</button>
-            <button class="buttons__firstLine--plusMinus">+/-</button>
-            <button class="buttons__firstLine--percentage">%</button>
-            <button class="buttons__firstLine--divide">/</button>
+            <button id="AC">AC</button>
+            <button id="plusMinus">+/-</button>
+            <button id="percentage">%</button>
+            <button id="divide">/</button>
           </div>
           <div class="buttons__secondLine">
-            <button class="buttons__secondLine--seven">7</button>
-            <button class="buttons__secondLine--eight">8</button>
-            <button class="buttons__secondLine--nine">9</button>
-            <button class="buttons__secondLine--multiply">x</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="multiply">x</button>
           </div>
           <div class="buttons__thirdLine">
-            <button class="buttons__thirdLine--four">4</button>
-            <button class="buttons__thirdLine--five">5</button>
-            <button class="buttons__thirdLine--six">6</button>
-            <button class="buttons__thirdLine--minus">-</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="minus">-</button>
           </div>
           <div class="buttons__fourthLine">
-            <button class="buttons__fourthLine--one">1</button>
-            <button class="buttons__fourthLine--two">2</button>
-            <button class="buttons__fourthLine--three">3</button>
-            <button class="buttons__fourthLine--plus">+</button>
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="plus">+</button>
           </div>
           <div class="buttons__fifthLine">
-            <button class="buttons__fifthLine--zero">0</button>
-            <button class="buttons__fifthLine--decimal">.</button>
-            <button class="buttons__fifthLine--equals">=</button>
+            <button id="zero">0</button>
+            <button id="decimal">.</button>
+            <button id="equals">=</button>
           </div>
-        </form>
+        </div>
       </section>
     </main>
+    <script src="dist/js/script.js"></script>
   </body>
 </html>
