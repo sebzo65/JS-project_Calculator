@@ -14,33 +14,129 @@
         <input type="text" class="phoneCalculator__screen--display" disabled />
         <div class="phoneCalculator__screen--buttons">
           <div class="buttons__firstLine">
-            <button id="AC">AC</button>
+            <button type="button" id="AC">AC</button>
             <button id="plusMinus">+/-</button>
-            <button id="percentage">%</button>
-            <button id="divide">/</button>
+            <button id="percentage" class="operator">%</button>
+            <button
+              type="button"
+              id="divide"
+              onclick="checkBeforeDisplayChange(this)"
+              data-value="/"
+            >
+              ÷
+            </button>
           </div>
           <div class="buttons__secondLine">
-            <button id="seven">7</button>
-            <button id="eight">8</button>
-            <button id="nine">9</button>
-            <button id="multiply">x</button>
+            <button
+              type="button"
+              id="seven"
+              class="buttons_Num"
+              onclick="displayChange(7)"
+            >
+              7
+            </button>
+            <button
+              type="button"
+              id="eight"
+              class="buttons_Num"
+              onclick="displayChange(8)"
+            >
+              8
+            </button>
+            <button
+              type="button"
+              id="nine"
+              class="buttons_Num"
+              onclick="displayChange(9)"
+            >
+              9
+            </button>
+            <button
+              type="button"
+              id="multiply"
+              class="operator"
+              onclick="checkBeforeDisplayChange(this)"
+              data-value="*"
+            >
+              x
+            </button>
           </div>
           <div class="buttons__thirdLine">
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button id="minus">-</button>
+            <button id="four" class="buttons_Num" onclick="displayChange(4)">
+              4
+            </button>
+            <button
+              type="button"
+              id="five"
+              class="buttons_Num"
+              onclick="displayChange(5)"
+            >
+              5
+            </button>
+            <button
+              type="button"
+              id="six"
+              class="buttons_Num"
+              onclick="displayChange(6)"
+            >
+              6
+            </button>
+            <button
+              type="button"
+              id="minus"
+              class="operator"
+              onclick="checkBeforeDisplayChange(this)"
+              data-value="-"
+            >
+              -
+            </button>
           </div>
           <div class="buttons__fourthLine">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="plus">+</button>
+            <button
+              type="button"
+              id="one"
+              class="buttons_Num"
+              onclick="displayChange(1)"
+            >
+              1
+            </button>
+            <button
+              type="button"
+              id="two"
+              class="buttons_Num"
+              onclick="displayChange(2)"
+            >
+              2
+            </button>
+            <button
+              type="button"
+              id="three"
+              class="buttons_Num"
+              onclick="displayChange(3)"
+            >
+              3
+            </button>
+            <button
+              type="button"
+              id="plus"
+              class="operator"
+              onclick="checkBeforeDisplayChange(this)"
+              data-value="+"
+            >
+              +
+            </button>
           </div>
           <div class="buttons__fifthLine">
-            <button id="zero">0</button>
-            <button id="decimal">.</button>
-            <button id="equals">=</button>
+            <button
+              type="button"
+              id="zero"
+              class="buttons_Num"
+              onclick="displayChange(0)"
+            >
+              0
+            </button>
+            <button type="button" id="decimal">.</button>
+            <button type="button" id="equals">=</button>
           </div>
         </div>
       </section>
