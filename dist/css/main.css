@@ -17,25 +17,28 @@
   border: 1px solid black;
   height: 6%;
   margin: 2% 2%;
+  color: white;
 }
-.phoneCalculator__screen--display {
+.phoneCalculator__screen .calcDisplay {
   height: 24%;
   margin: 1% 2%;
   font-size: auto;
-  font-size: x-large;
+  font-size: 4em;
+  text-align: right;
+  color: white;
 }
-.phoneCalculator__screen--buttons {
+.phoneCalculator__screen .buttonsAll {
   height: 63%;
   margin: 0 2% 0 2%;
   display: flex;
   flex-direction: column;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine {
   height: 18%;
   margin: 0;
   display: flex;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #AC {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #ac {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -44,10 +47,11 @@
   font-size: x-large;
   background-color: #d4d4d2;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #AC:hover {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #ac:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #plusMinus {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #plusMinus {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -56,10 +60,11 @@
   font-size: x-large;
   background-color: #d4d4d2;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #plusMinus:hover {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #plusMinus:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #percentage {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #percentage {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -68,10 +73,11 @@
   font-size: x-large;
   background-color: #d4d4d2;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #percentage:hover {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #percentage:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #divide {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #divide {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -81,15 +87,16 @@
   background-color: #ff9500;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__firstLine #divide:hover {
+.phoneCalculator__screen .buttonsAll .buttons__firstLine #divide:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine {
   height: 18%;
   margin: 1% 0 0;
   display: flex;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #seven {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #seven {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -99,10 +106,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #seven:hover {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #seven:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #eight {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #eight {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -112,10 +120,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #eight:hover {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #eight:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #nine {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #nine {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -125,10 +134,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #nine:hover {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #nine:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #multiply {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #multiply {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -138,15 +148,16 @@
   background-color: #ff9500;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__secondLine #multiply:hover {
+.phoneCalculator__screen .buttonsAll .buttons__secondLine #multiply:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine {
   height: 18%;
   margin: 1% 0 0;
   display: flex;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #four {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #four {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -156,10 +167,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #four:hover {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #four:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #five {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #five {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -169,10 +181,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #five:hover {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #five:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #six {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #six {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -182,10 +195,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #six:hover {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #six:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #minus {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #minus {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -195,15 +209,16 @@
   background-color: #ff9500;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__thirdLine #minus:hover {
+.phoneCalculator__screen .buttonsAll .buttons__thirdLine #minus:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine {
   height: 18%;
   margin: 1% 0 0;
   display: flex;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #one {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #one {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -213,10 +228,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #one:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #one:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #two {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #two {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -226,10 +242,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #two:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #two:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #three {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #three {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -239,10 +256,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #three:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #three:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #plus {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #plus {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -252,15 +270,16 @@
   background-color: #ff9500;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fourthLine #plus:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fourthLine #plus:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine {
   height: 18%;
   margin: 1% 0 0;
   display: flex;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #zero {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #zero {
   border: 1px solid black;
   height: 100%;
   width: 40%;
@@ -270,10 +289,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #zero:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #zero:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #decimal {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #decimal {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -284,10 +304,11 @@
   background-color: #505050;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #decimal:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #decimal:hover {
   opacity: 0.5;
+  background-color: gray;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #equals {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #equals {
   border: 1px solid black;
   height: 100%;
   width: 18%;
@@ -297,6 +318,7 @@
   background-color: #ff9500;
   color: white;
 }
-.phoneCalculator__screen--buttons .buttons__fifthLine #equals:hover {
+.phoneCalculator__screen .buttonsAll .buttons__fifthLine #equals:hover {
   opacity: 0.5;
+  background-color: gray;
 }

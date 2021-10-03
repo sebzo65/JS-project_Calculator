@@ -11,132 +11,36 @@
     <main class="phoneCalculator">
       <section class="phoneCalculator__screen">
         <div class="phoneCalculator__screen--nav"></div>
-        <input type="text" class="phoneCalculator__screen--display" disabled />
-        <div class="phoneCalculator__screen--buttons">
+        <div class="calcDisplay" id="display">0</div>
+        <div class="buttonsAll">
           <div class="buttons__firstLine">
-            <button type="button" id="AC">AC</button>
-            <button id="plusMinus">+/-</button>
-            <button id="percentage" class="operator">%</button>
-            <button
-              type="button"
-              id="divide"
-              onclick="checkBeforeDisplayChange(this)"
-              data-value="/"
-            >
-              ÷
-            </button>
+            <button id="ac" class="delete">AC</button>
+            <button id="plusMinus" class="buttons">+/-</button>
+            <button id="percentage" class="operations">%</button>
+            <button id="divide" class="operations">÷</button>
           </div>
           <div class="buttons__secondLine">
-            <button
-              type="button"
-              id="seven"
-              class="buttons_Num"
-              onclick="displayChange(7)"
-            >
-              7
-            </button>
-            <button
-              type="button"
-              id="eight"
-              class="buttons_Num"
-              onclick="displayChange(8)"
-            >
-              8
-            </button>
-            <button
-              type="button"
-              id="nine"
-              class="buttons_Num"
-              onclick="displayChange(9)"
-            >
-              9
-            </button>
-            <button
-              type="button"
-              id="multiply"
-              class="operator"
-              onclick="checkBeforeDisplayChange(this)"
-              data-value="*"
-            >
-              x
-            </button>
+            <button id="seven" class="buttons">7</button>
+            <button id="eight" class="buttons">8</button>
+            <button id="nine" class="buttons">9</button>
+            <button id="multiply" class="operations">x</button>
           </div>
           <div class="buttons__thirdLine">
-            <button id="four" class="buttons_Num" onclick="displayChange(4)">
-              4
-            </button>
-            <button
-              type="button"
-              id="five"
-              class="buttons_Num"
-              onclick="displayChange(5)"
-            >
-              5
-            </button>
-            <button
-              type="button"
-              id="six"
-              class="buttons_Num"
-              onclick="displayChange(6)"
-            >
-              6
-            </button>
-            <button
-              type="button"
-              id="minus"
-              class="operator"
-              onclick="checkBeforeDisplayChange(this)"
-              data-value="-"
-            >
-              -
-            </button>
+            <button id="four" class="buttons">4</button>
+            <button id="five" class="buttons">5</button>
+            <button id="six" class="buttons">6</button>
+            <button id="minus" class="operations">-</button>
           </div>
           <div class="buttons__fourthLine">
-            <button
-              type="button"
-              id="one"
-              class="buttons_Num"
-              onclick="displayChange(1)"
-            >
-              1
-            </button>
-            <button
-              type="button"
-              id="two"
-              class="buttons_Num"
-              onclick="displayChange(2)"
-            >
-              2
-            </button>
-            <button
-              type="button"
-              id="three"
-              class="buttons_Num"
-              onclick="displayChange(3)"
-            >
-              3
-            </button>
-            <button
-              type="button"
-              id="plus"
-              class="operator"
-              onclick="checkBeforeDisplayChange(this)"
-              data-value="+"
-            >
-              +
-            </button>
+            <button id="one" class="buttons">1</button>
+            <button id="two" class="buttons">2</button>
+            <button id="three" class="buttons">3</button>
+            <button id="plus" class="operations">+</button>
           </div>
           <div class="buttons__fifthLine">
-            <button
-              type="button"
-              id="zero"
-              class="buttons_Num"
-              onclick="displayChange(0)"
-            >
-              0
-            </button>
-            <button type="button" id="decimal">.</button>
-            <button type="button" id="equals">=</button>
+            <button id="zero" class="buttons">0</button>
+            <button id="decimal" class="buttons">.</button>
+            <button id="equals" class="buttons">=</button>
           </div>
         </div>
       </section>

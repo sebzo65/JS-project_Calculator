@@ -19,16 +19,19 @@
       border: 1px solid black;
       height: 6%;
       margin: 2% 2%;
+      color: white;
     }
 
-    &--display {
+    .calcDisplay {
       height: 24%;
       margin: 1% 2%;
       font-size: auto;
-      font-size: x-large;
+      font-size: 4em;
+      text-align: right;
+      color: white;
     }
 
-    &--buttons {
+    .buttonsAll {
       height: 63%;
       margin: 0 2% 0 2%;
       display: flex;
@@ -39,7 +42,7 @@
         margin: 0;
         display: flex;
 
-        #AC {
+        #ac {
           @include config.button__styling;
           background-color: config.$button-color-gray;
 
