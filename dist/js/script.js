@@ -20,21 +20,22 @@
 const display = document.querySelector("#display");
 //This will take all HTML elements with class name 'buttons' and make an array from it
 
-//Button values will be stored within these variables
-let haveDot = false;
+//Button values will be stored within these variables in the global scope
 let numA = "";
-let numB = "";
-let operator = "";
-let result = "";
+// let haveDot = false;
+let operatorKey = "";
+// let result = "";
 
 //Numbers & Decimal Point
 //Array.from to turn items with class name button to an array
 let buttons = Array.from(document.getElementsByClassName("buttons"));
 let displayChange = buttons.map((button) => {
   button.addEventListener("click", (e) => {
-    if (e.target.innerText === "." && !haveDot) {
-      haveDot = true; //Check if there's already a decimal point
-    } else if (e.target.innerText === "." && haveDot) {
+    if (display.innerHTML.length > 8) {
+      //Specifying max length of characters
+      display.innerHTML = alert("number too long");
+    }
+    if (e.target.innerText === "." && checkDecimal(numA)) {
       return;
     }
     // console.log(event.target); //Returns element that triggered the event
@@ -43,37 +44,12 @@ let displayChange = buttons.map((button) => {
     display.innerHTML = numA;
   });
 });
-
-//Function that will be called upon when performing operations
-// const mathOps = (numA, numB, operand) => {
-//   // result = "";
-//   if (operand === "+") {
-//     result = parseFloat(numA) + parseFloat(numB);
-//   } else if (operand === "-") {
-//     result = parseFloat(numA) - parseFloat(numB);
-//   } else if (operand === "x") {
-//     result = parseFloat(numA) * parseFloat(numB);
-//   } else if (operand === "÷") {
-//     result = parseFloat(numA) / parseFloat(numB);
-//   } else if (operand === "%") {
-//     result = parseFloat(numA) % parseFloat(numB);
-//   }
-//   return numB;
-// };
-const mathOps = (numA, numB, operand) => {
-  // result = "";
-  if (operand === "+") {
-    return numA + numB;
-  } else if (operand === "-") {
-    return numA - numB;
-  } else if (operand === "x") {
-    return numA * numB;
-  } else if (operand === "÷") {
-    return numA / numB;
-  } else if (operand === "%") {
-    return numA % numB;
+//Function to check whether there is already a decimal point
+let checkDecimal = (dot) => {
+  if (dot.includes(".")) {
+    return true;
   }
-  return numB;
+  return false;
 };
 
 //Operations
@@ -84,25 +60,96 @@ let operations = operators.map((operator) => {
       display.innerText = numA;
       operator = operators.value;
     }
-    // if (numA !== "" && numB !== "") {
-    //   numA = mathOps(numA, numB, operator);
-    //   numB = "";
-    //   display.innerText = numA;
-    //   operator = operators.value;
+    // if (e.target.innerText === "+" && checkOperator(operatorKey)) {
+    //   return;
     // }
-    else if (numA !== "" && numB !== "") {
-      result = mathOps(numA, numB, operator);
-      display.innerText = result;
-    }
+    // if (e.target.innerText === "-" && checkOperator(operatorKey)) {
+    //   return;
+    // }
+    // if (e.target.innerText === "x" && checkOperator(operatorKey)) {
+    //   return;
+    // }
+    // if (e.target.innerText === "÷" && checkOperator(operatorKey)) {
+    //   return;
+    // }
+    // if (e.target.innerText === "%" && checkOperator(operatorKey)) {
+    //   return;
+    // }
+
     numA += e.target.innerHTML;
     display.innerHTML = numA;
   });
 });
+
+//Function to check whether there is already a math operator
+let checkOperator = (mathOp) => {
+  if (mathOp.includes("+")) {
+    return true;
+  }
+  if (mathOp.includes("-")) {
+    return true;
+  }
+  if (mathOp.includes("x")) {
+    return true;
+  }
+  if (mathOp.includes("÷")) {
+    return true;
+  }
+  if (mathOp.includes("%")) {
+    return true;
+  }
+  return false;
+};
 //Calculating with equals
+//Creating a function that takes an array that stores the value
+//of the mathematical expression in the calculator display
+const calculate = (expression) => {
+  console.log(expression);
+  let expressionArray = expression.split(""); //Split the array
+  let resultOps = expressionArray.findIndex((operator) => {
+    //Find Index of operator in array
+    return matchOperator(operator); //return operator character defined in matchOperator function
+  });
+  console.log(resultOps);
+  let lhs = expressionArray.slice(0, resultOps).join(""); //Let lhs = string of numbers to left of operator. Then convert to a string
+  let rhs = expressionArray
+    .slice(resultOps + 1, expressionArray.length - 1) //Minus the equls sign which is last in array
+    .join(""); //Let rhs = string of numbers to right of operator. Then convert to a string
+  let ops = expressionArray.slice(resultOps, resultOps + 1).join("");
+
+  return [parseFloat(lhs), ops, parseFloat(rhs)]; //Return the expression
+};
+
+const matchOperator = (character) => {
+  if (character === "+") return true;
+  if (character === "-") return true;
+  if (character === "x") return true;
+  if (character === "÷") return true;
+  if (character === "%") return true;
+  return false;
+};
+
+let result = 0;
 let equals = document.querySelector("#equals");
-equals.addEventListener("click", (e) => {
-  result = mathOps(numA, numB, operator);
-  display.innerText = result;
+equals.addEventListener("click", () => {
+  let resultOps = calculate(numA);
+  operatorKey = resultOps[1];
+  if (operatorKey === "+") {
+    result = resultOps[0] + resultOps[2];
+  }
+  if (operatorKey === "-") {
+    result = resultOps[0] - resultOps[2];
+  }
+  if (operatorKey === "x") {
+    result = resultOps[0] * resultOps[2];
+  }
+  if (operatorKey === "÷") {
+    result = resultOps[0] / resultOps[2]; //Fix this//Returning previous result
+  }
+  if (operatorKey === "%") {
+    result = resultOps[0] % resultOps[2];
+  }
+  console.log(result);
 });
 
 //Clear Button (AC)
@@ -110,9 +157,6 @@ ac = document.querySelector("#ac");
 ac.addEventListener("click", () => {
   display.innerText = "0";
   numA = "";
-  numB = "";
-  operator = "";
-  result = "";
 });
 
 // function mathOperations(){
