@@ -60,9 +60,9 @@ let operations = operators.map((operator) => {
       display.innerText = numA;
       operator = operators.value;
     }
-    // if (e.target.innerText === "+" && checkOperator(operatorKey)) {
-    //   return;
-    // }
+    if (display.innerHTML.includes("+") && checkOperator(operator)) {
+      return false;
+    }
     // if (e.target.innerText === "-" && checkOperator(operatorKey)) {
     //   return;
     // }
@@ -83,19 +83,19 @@ let operations = operators.map((operator) => {
 
 //Function to check whether there is already a math operator
 let checkOperator = (mathOp) => {
-  if (mathOp.includes("+")) {
+  if (mathOp === "+") {
     return true;
   }
-  if (mathOp.includes("-")) {
+  if (mathOp === "-") {
     return true;
   }
-  if (mathOp.includes("x")) {
+  if (mathOp === "x") {
     return true;
   }
-  if (mathOp.includes("÷")) {
+  if (mathOp === "÷") {
     return true;
   }
-  if (mathOp.includes("%")) {
+  if (mathOp === "%") {
     return true;
   }
   return false;
@@ -128,7 +128,7 @@ const matchOperator = (character) => {
   if (character === "%") return true;
   return false;
 };
-
+//Find a way to remove equals sign
 let result = 0;
 let equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
@@ -144,12 +144,12 @@ equals.addEventListener("click", () => {
     result = resultOps[0] * resultOps[2];
   }
   if (operatorKey === "÷") {
-    result = resultOps[0] / resultOps[2]; //Fix this//Returning previous result
+    result = resultOps[0] / resultOps[2];
   }
   if (operatorKey === "%") {
     result = resultOps[0] % resultOps[2];
   }
-  console.log(result);
+  display.innerText += result; //Show result in display screen
 });
 
 //Clear Button (AC)
