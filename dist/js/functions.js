@@ -33,3 +33,4 @@ export const matchOperator = (character) => {
   if (character === "%") return true;
   return false;
 };
+

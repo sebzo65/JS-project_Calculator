@@ -1,7 +1,5 @@
 import { checkDecimal, calculate, matchOperator } from "./functions.js";
 
-//What do we need? //
-
 //1. A function that takes 3 arguments (2 numbers + 1 operator) & that returns the result
 //2. Have a way to click on key & create string (look into parseFloat() or
 //parseFloat() function if you want to work with number type)
