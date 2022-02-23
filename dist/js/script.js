@@ -1,6 +1,6 @@
-//What do we need? //
+import { checkDecimal, calculate, matchOperator } from "./functions.js";
 
-// import createElemWithText from "./dom-utils";
+//What do we need? //
 
 //1. A function that takes 3 arguments (2 numbers + 1 operator) & that returns the result
 //2. Have a way to click on key & create string (look into parseFloat() or
@@ -16,15 +16,12 @@
 //Do the same for the operators
 //For the other buttons such as decimal point & equals, these require working with them uniquely
 
-// const numButton = document.querySelectorAll(".buttons_Num");
 const display = document.querySelector("#display");
 //This will take all HTML elements with class name 'buttons' and make an array from it
 
 //Button values will be stored within these variables in the global scope
-let numA = "";
-// let haveDot = false;
-let operatorKey = "";
-// let result = "";
+let numA;
+let operatorKey;
 
 //Numbers & Decimal Point
 //Array.from to turn items with class name button to an array
@@ -44,13 +41,6 @@ let displayChange = buttons.map((button) => {
     display.innerHTML = numA;
   });
 });
-//Function to check whether there is already a decimal point
-let checkDecimal = (dot) => {
-  if (dot.includes(".")) {
-    return true;
-  }
-  return false;
-};
 
 //Operations
 let operators = Array.from(document.getElementsByClassName("operations"));
@@ -63,18 +53,6 @@ let operations = operators.map((operator) => {
     if (display.innerHTML.includes("+") && checkOperator(operator)) {
       return false;
     }
-    // if (e.target.innerText === "-" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "x" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "÷" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "%" && checkOperator(operatorKey)) {
-    //   return;
-    // }
 
     numA += e.target.innerHTML;
     display.innerHTML = numA;
@@ -100,34 +78,7 @@ let checkOperator = (mathOp) => {
   }
   return false;
 };
-//Calculating with equals
-//Creating a function that takes an array that stores the value
-//of the mathematical expression in the calculator display
-const calculate = (expression) => {
-  console.log(expression);
-  let expressionArray = expression.split(""); //Split the array
-  let resultOps = expressionArray.findIndex((operator) => {
-    //Find Index of operator in array
-    return matchOperator(operator); //return operator character defined in matchOperator function
-  });
-  console.log(resultOps);
-  let lhs = expressionArray.slice(0, resultOps).join(""); //Let lhs = string of numbers to left of operator. Then convert to a string
-  let rhs = expressionArray
-    .slice(resultOps + 1, expressionArray.length - 1) //Minus the equls sign which is last in array
-    .join(""); //Let rhs = string of numbers to right of operator. Then convert to a string
-  let ops = expressionArray.slice(resultOps, resultOps + 1).join("");
 
-  return [parseFloat(lhs), ops, parseFloat(rhs)]; //Return the expression
-};
-
-const matchOperator = (character) => {
-  if (character === "+") return true;
-  if (character === "-") return true;
-  if (character === "x") return true;
-  if (character === "÷") return true;
-  if (character === "%") return true;
-  return false;
-};
 //Find a way to remove equals sign
 let result = 0;
 let equals = document.querySelector("#equals");
@@ -158,59 +109,3 @@ ac.addEventListener("click", () => {
   display.innerText = "0";
   numA = "";
 });
-
-// function mathOperations(){
-//   if (lastOps === 'x'){
-//     result = parseFloat(result) * parseFloat(disNum);
-//   }
-// }
-
-//Get the 2 number inputs
-
-// const calculateResult = (operand) => {
-//   if (operand.includes("+")) {
-//     return mathOps["plus"];
-//   } else if (operand.includes("-")) {
-//     return mathOps["minus"];
-//   } else if (operand.includes("x")) {
-//     return mathOps["times"];
-//   } else {
-//     return mathOps["divide"];
-//   }
-// };
-
-//Check
-
-// const calculator = {
-//   displayValue: "0",
-//   firstOperand: null,
-//   waitingForSecondOperand: false,
-//   operator: null,
-// };
-
-// function updateDisplay() {
-//   const display = document.querySelector(".phoneCalculator__screen--buttons");
-
-//   display.value = Object.values(calculator.displayValue);
-// }
-// updateDisplay();
-
-// numButton.forEach(numButton =>
-//   numButton.addEventListener("click", event => {
-//     if (operator.includes("")){
-//       a += numButton.value;
-//       display.innerText = a;
-//       console.log(a);
-//     } else {
-
-//     }
-//   })
-
-//   operator.forEach(operators => {
-//     operator.addEventListener("click", event => {
-//       if (a !== ""){
-//         display.innerText = a;
-//         operators = operator.value;
-//       }
-//     })
-//   })
