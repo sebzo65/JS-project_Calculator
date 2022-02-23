@@ -1,6 +1,6 @@
 //What do we need? //
 
-// import createElemWithText from "./dom-utils";
+import checkDecimal from "./functions";
 
 //1. A function that takes 3 arguments (2 numbers + 1 operator) & that returns the result
 //2. Have a way to click on key & create string (look into parseFloat() or
@@ -44,13 +44,6 @@ let displayChange = buttons.map((button) => {
     display.innerHTML = numA;
   });
 });
-//Function to check whether there is already a decimal point
-let checkDecimal = (dot) => {
-  if (dot.includes(".")) {
-    return true;
-  }
-  return false;
-};
 
 //Operations
 let operators = Array.from(document.getElementsByClassName("operations"));
@@ -63,18 +56,6 @@ let operations = operators.map((operator) => {
     if (display.innerHTML.includes("+") && checkOperator(operator)) {
       return false;
     }
-    // if (e.target.innerText === "-" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "x" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "÷" && checkOperator(operatorKey)) {
-    //   return;
-    // }
-    // if (e.target.innerText === "%" && checkOperator(operatorKey)) {
-    //   return;
-    // }
 
     numA += e.target.innerHTML;
     display.innerHTML = numA;
