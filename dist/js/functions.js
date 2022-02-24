@@ -8,7 +8,7 @@ export const checkDecimal = (dot) => {
 
 //Creating a function that takes an array that stores the value
 //of the mathematical expression in the calculator display
-export const calculate = (expression) => {
+export const splitExpression = (expression) => {
   console.log("Expression:", expression);
   let expressionArray = expression.split(""); //Split the array
   let resultOps = expressionArray.findIndex((operator) => {
@@ -25,6 +25,7 @@ export const calculate = (expression) => {
   return [parseFloat(lhs), ops, parseFloat(rhs)]; //Return the expression
 };
 
+//Function to match the operator
 export const matchOperator = (character) => {
   if (character === "+") return true;
   if (character === "-") return true;
@@ -32,4 +33,18 @@ export const matchOperator = (character) => {
   if (character === "÷") return true;
   if (character === "%") return true;
   return false;
+};
+
+//Function to check whether there is already an operator
+export const checkDoubleOps = (arr, ops) => {
+  if (arr.includes(ops)) {
+    return true;
+  }
+};
+
+//Function to limit number of input characters to 8
+export const limitChars = (displayText) => {
+  if (displayText.length > 8) {
+    return true;
+  }
 };
