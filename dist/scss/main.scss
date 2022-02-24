@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     background-color: config.$phone-back-black;
+    border-radius: 5%;
 
     &--nav {
       border: 1px solid black;
