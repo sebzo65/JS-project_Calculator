@@ -9,13 +9,12 @@ export const checkDecimal = (dot) => {
 //Creating a function that takes an array that stores the value
 //of the mathematical expression in the calculator display
 export const splitExpression = (expression) => {
-  console.log("Expression:", expression);
   let expressionArray = expression.split(""); //Split the array
   let resultOps = expressionArray.findIndex((operator) => {
     //Find Index of operator in array
     return matchOperator(operator); //return operator character defined in matchOperator function
   });
-  console.log(resultOps);
+  console.log("resultOps", resultOps);
   let lhs = expressionArray.slice(0, resultOps).join(""); //Let lhs = string of numbers to left of operator. Then convert to a string
   let rhs = expressionArray
     .slice(resultOps + 1, expressionArray.length - 1) //Minus the equls sign which is last in array
@@ -47,4 +46,41 @@ export const limitChars = (displayText) => {
   if (displayText.length > 8) {
     return true;
   }
+};
+
+//Function to execute computation
+export const performMath = (arr, text, ops) => {
+  let result = 0;
+
+  if (!checkDoubleOps) {
+    switch (ops) {
+      case "+":
+        result = arr[0] + arr[2];
+        break;
+      case "-":
+        result = arr[0] - arr[2];
+        break;
+      case "x":
+        result = arr[0] * arr[2];
+        break;
+      case "÷":
+        result = arr[0] / arr[2];
+        break;
+      case "%":
+        result = arr[0] % arr[2];
+        break;
+    }
+  }
+  text = result; //Show result in display
+};
+
+//Function to update the display
+export const updateDisplay = (n, text) => {
+  text += n;
+};
+
+//Function to update the current number
+export const updateCurrentNum = (n, text, currNum) => {
+  text += n;
+  currNum = n;
 };
